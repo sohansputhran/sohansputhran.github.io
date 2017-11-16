@@ -1,1 +1,22 @@
-"Hello World" 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="jquery-3.2.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#btn').click(function(){
+            $("#test").load("data.txt");
+        });
+
+      });
+    </script>
+  </head>
+  <body>
+    <div id="test">
+      <p>This is the First Content!!!!</p>
+    </div>
+
+    <button id="btn" type="button" name="button">Click to change</button>
+  </body>
+</html>
