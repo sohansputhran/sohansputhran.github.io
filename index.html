@@ -6,10 +6,7 @@
     <script>
       $(document).ready(function(){
         $('#btn').click(function(){
-            $("#test").load("data.txt", {
-              Name: "Daniel",
-              LastName: "Nelson"
-            }, function(){
+            $("#test").load("data.txt", function(){
               alert("Hi there!!!!!");
             });
         });
