@@ -94,7 +94,7 @@ analytics:
 # Site Author
 author:
   name             : "Sohan Puthran"
-  avatar           : "/images/profile-pic.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Data Science Portfolio"
   location         : "Chicago,IL"
   email            :
@@ -108,9 +108,9 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
-    # - label: "Linkedin"
-    #   icon: "fab fa-fw fa-linkedin-in"
-    #   url: "https://linkedin.com/in/sohansputhran"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linedin-in"
+      url: "https://linkedin.com/in/sohansputhran"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sohansputhran"
