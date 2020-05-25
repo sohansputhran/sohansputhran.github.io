@@ -3,7 +3,7 @@ permalink: /projects/
 title: "Projects By Tags"
 author_profile: true
 header:
-  image: "/images/profile-pic.jpg"
+  <!-- image: "/images/profile-pic.jpg" -->
 
 -------
 
