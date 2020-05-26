@@ -4,7 +4,7 @@ title: "First Post"
 date: 2020-05-25
 tags: [ data science ]
 header:
-  image: "/images/profile-pic.jpg"
+  image: "/images/background.jpg"
 excerpt: "Machine Learning, Data Science, Web"
 mathjax: true
 

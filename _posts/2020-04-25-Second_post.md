@@ -4,7 +4,7 @@ title: "Second Post"
 date: 2020-04-25
 tags: [ machine learning ]
 header:
-  image: "/images/profile-pic.jpg"
+  image: "/images/background.jpg"
 excerpt: "Machine Learning, Data Science, Web"
 mathjax: true
 

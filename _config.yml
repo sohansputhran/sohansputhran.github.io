@@ -49,7 +49,7 @@ staticman:
       options:
         format           : # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 reCaptcha:
-  siteKey                :
+  siteKey                : ""
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
@@ -87,7 +87,7 @@ analytics:
 # Site Author
 author:
   name             : "Sohan Puthran"
-  avatar           : "/images/profile-pic.jpg"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/avatar.jpg"  # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am a Data Science Student"
   location         : "Chicago, IL"
   email            : "puthran.sohan@gmail.com"
@@ -99,19 +99,19 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "https://www.github.com/sohansputhran"
+  github           : "sohansputhran"
   gitlab           :
   google_plus      :
-  keybase          :
+  keybase          : 
   instagram        :
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/sohansputhran"  # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
+  linkedin         : "sohansputhran"  # "john-doe-12345678" (the last part of your profile url, e.g. https://www.linkedin.com/in/john-doe-12345678)
   pinterest        :
   soundcloud       :
   stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
   steam            : # "steamId" (the last part of your profile url, e.g. https://steamcommunity.com/id/steamId/)
   tumblr           :
-  twitter          : "https://twitter.com/puthran_sohan"
+  twitter          : "puthran_sohan"
   vine             :
   weibo            :
   xing             :
@@ -233,6 +233,14 @@ tag_archive:
 #     category: /categories/:name/
 #     tag: /tags/:name/
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:categories/:title/
+  blogs:
+    output: true
+    permalink: /:categories/:title/
 
 # HTML Compression
 # - http://jch.penibelst.de/
@@ -258,7 +266,7 @@ defaults:
 
   # _pages
   - scope:
-      path: ""
+      path: "_pages"
       type: pages
       values:
         layout: single
