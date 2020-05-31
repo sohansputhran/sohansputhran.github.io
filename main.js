@@ -35,7 +35,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>blogs works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header\" data-parallax=\"true\" style=\"background-image: url('./assets/img/daniel-olahh.jpg');\">\n    <div class=\"filter\"></div>\n    <div class=\"content-center\">\n        <div class=\"container\">\n            <div class=\"title-brand\">\n                <h1 class=\"presentation-title\">Blogs</h1>\n                <div class=\"fog-low\">\n                    <img src=\"assets/img/fog-low.png\" alt=\"\">\n                </div>\n                <div class=\"fog-low right\">\n                    <img src=\"assets/img/fog-low.png\" alt=\"\">\n                </div>\n            </div>\n\n            <h2 class=\"presentation-subtitle text-center\">Blog posts on the things I have learnt.</h2>\n        </div>\n    </div>\n    <div class=\"moving-clouds\" style=\"background-image: url('assets/img/clouds.png'); \"></div>\n</div>\n<div class=\"main\">\n\n    <div class=\"section-nude\" *ngFor=\"let blog of blogs\">\n        <div class=\"container\">\n            <div class=\"typography-line\">\n                <h2>{{blog.name}}</h2>\n                <div class=\"row\" style=\"color: #9a9a9a;\">\n                    <h4 class=\"col-6\"><i class=\"nc-icon nc-tag-content\"></i> {{blog.tag}}</h4>\n                    <h4 class=\"col-6\" style=\"text-align: right\"><i class=\"nc-icon nc-calendar-60\"></i> {{blog.date}}</h4>\n                </div>\n\n            </div>\n            <div class=\"row\">\n\n            </div>\n        </div>\n    </div>\n\n    <div class=\"section landing-section\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-8 mr-auto ml-auto\">\n                    <h2 class=\"text-center\">Keep in touch?</h2>\n                    <form class=\"contact-form\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <label>Name</label>\n                                <div class=\"input-group\" [ngClass]=\"{'input-group-focus':focus===true}\">\n                                    <div class=\"input-group-prepend\">\n                                        <span class=\"input-group-text\"><i class=\"nc-icon nc-single-02\"></i></span>\n                                    </div>\n                                    <input type=\"text\" class=\"form-control\" placeholder=\"Name\" (focus)=\"focus=true\" (blur)=\"focus=false\">\n                                </div>\n                            </div>\n                            <div class=\"col-md-6\">\n                                <label>Email</label>\n                                <div class=\"input-group\" [ngClass]=\"{'input-group-focus':focus1===true}\">\n                                    <div class=\"input-group-prepend\">\n                                        <span class=\"input-group-text\">  <i class=\"nc-icon nc-email-85\"></i></span>\n                                    </div>\n                                    <input type=\"text\" class=\"form-control\" placeholder=\"Email\" (focus)=\"focus1=true\" (blur)=\"focus1=false\">\n                                </div>\n                            </div>\n                        </div>\n                        <label>Message</label>\n                        <textarea class=\"form-control\" rows=\"4\" placeholder=\"Tell us your thoughts and feelings...\"></textarea>\n                        <div class=\"row\">\n                            <div class=\"col-md-4 mr-auto ml-auto\">\n                                <button class=\"btn btn-danger btn-lg btn-fill\">Send Message</button>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -178,7 +178,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<p>projects works!</p>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"page-header\" data-parallax=\"true\" style=\"background-image: url('./assets/img/daniel-olahh.jpg');\">\n    <div class=\"filter\"></div>\n    <div class=\"container\">\n        <div class=\"content-center\">\n            <div class=\"container\">\n                <div class=\"title-brand\">\n                    <h1 class=\"presentation-title\">Projects</h1>\n                    <div class=\"fog-low\">\n                        <img src=\"assets/img/fog-low.png\" alt=\"\">\n                    </div>\n                    <div class=\"fog-low right\">\n                        <img src=\"assets/img/fog-low.png\" alt=\"\">\n                    </div>\n                </div>\n\n                <h2 class=\"presentation-subtitle text-center\">These are some of my projects.</h2>\n            </div>\n        </div>\n    </div>\n</div>\n<div class=\"main\">\n\n    <div class=\"section-nude\" *ngFor=\"let project of projects\">\n        <div class=\"container\">\n            <div class=\"typography-line\">\n                <h2>{{project.name}}</h2>\n                <div class=\"row\" style=\"color: #9a9a9a;\">\n                    <h4 class=\"col-6\"><i class=\"nc-icon nc-tag-content\"></i> {{project.tag}}</h4>\n                    <h4 class=\"col-6\" style=\"text-align: right\"><i class=\"nc-icon nc-calendar-60\"></i> {{project.date}}</h4>\n                </div>\n                <div>\n                    Description\n                </div>\n\n            </div>\n            <div class=\"row\">\n\n            </div>\n        </div>\n    </div>\n\n    <div class=\"section landing-section\">\n        <div class=\"container\">\n            <div class=\"row\">\n                <div class=\"col-md-8 mr-auto ml-auto\">\n                    <h2 class=\"text-center\">Keep in touch?</h2>\n                    <form class=\"contact-form\">\n                        <div class=\"row\">\n                            <div class=\"col-md-6\">\n                                <label>Name</label>\n                                <div class=\"input-group\" [ngClass]=\"{'input-group-focus':focus===true}\">\n                                    <div class=\"input-group-prepend\">\n                                        <span class=\"input-group-text\"><i class=\"nc-icon nc-single-02\"></i></span>\n                                    </div>\n                                    <input type=\"text\" class=\"form-control\" placeholder=\"Name\" (focus)=\"focus=true\" (blur)=\"focus=false\">\n                                </div>\n                            </div>\n                            <div class=\"col-md-6\">\n                                <label>Email</label>\n                                <div class=\"input-group\" [ngClass]=\"{'input-group-focus':focus1===true}\">\n                                    <div class=\"input-group-prepend\">\n                                        <span class=\"input-group-text\">  <i class=\"nc-icon nc-email-85\"></i></span>\n                                    </div>\n                                    <input type=\"text\" class=\"form-control\" placeholder=\"Email\" (focus)=\"focus1=true\" (blur)=\"focus1=false\">\n                                </div>\n                            </div>\n                        </div>\n                        <label>Message</label>\n                        <textarea class=\"form-control\" rows=\"4\" placeholder=\"Tell us your thoughts and feelings...\"></textarea>\n                        <div class=\"row\">\n                            <div class=\"col-md-4 mr-auto ml-auto\">\n                                <button class=\"btn btn-danger btn-lg btn-fill\">Send Message</button>\n                            </div>\n                        </div>\n                    </form>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -582,7 +582,7 @@ var AppRoutingModule = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Jsb2dzL2Jsb2dzLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".typography-line {\r\n    padding-left: 0px;\r\n}\r\n\r\n.section-nude {\r\n    background-color: #FFF;\r\n    margin-top: 22px;\r\n    border-bottom: groove;\r\n    border-radius: 9px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYmxvZ3MvYmxvZ3MuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0QixnQkFBZ0I7SUFDaEIscUJBQXFCO0lBQ3JCLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL2Jsb2dzL2Jsb2dzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudHlwb2dyYXBoeS1saW5lIHtcclxuICAgIHBhZGRpbmctbGVmdDogMHB4O1xyXG59XHJcblxyXG4uc2VjdGlvbi1udWRlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XHJcbiAgICBtYXJnaW4tdG9wOiAyMnB4O1xyXG4gICAgYm9yZGVyLWJvdHRvbTogZ3Jvb3ZlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogOXB4O1xyXG59Il19 */");
 
 /***/ }),
 
@@ -612,6 +612,38 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 var BlogsComponent = /** @class */ (function () {
     function BlogsComponent() {
+        this.blogs = [
+            {
+                "name": "Avengers: Endgame",
+                "tag": "ML",
+                "date": "01-05-2020"
+            },
+            {
+                "name": "Good Boys",
+                "tag": "DL",
+                "date": "02-05-2020"
+            },
+            {
+                "name": "Playmobil: The Movie",
+                "tag": "DS",
+                "date": "03-05-2020"
+            },
+            {
+                "name": "Aquarela",
+                "tag": "NLP",
+                "date": "04-05-2020"
+            },
+            {
+                "name": "Aladdin",
+                "tag": "WS",
+                "date": "05-05-2020"
+            },
+            {
+                "name": "Downton Abbey",
+                "tag": "CV",
+                "date": "06-05-2020"
+            }
+        ];
     }
     BlogsComponent.prototype.ngOnInit = function () {
     };
@@ -1415,7 +1447,7 @@ var SignupComponent = /** @class */ (function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLmNvbXBvbmVudC5jc3MifQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".typography-line {\r\n    padding-left: 0px;\r\n}\r\n\r\n.section-nude {\r\n    background-color: #FFF;\r\n    margin-top: 22px;\r\n    border-bottom: groove;\r\n    border-radius: 9px;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcHJvamVjdHMvcHJvamVjdHMuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0QixnQkFBZ0I7SUFDaEIscUJBQXFCO0lBQ3JCLGtCQUFrQjtBQUN0QiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudHlwb2dyYXBoeS1saW5lIHtcclxuICAgIHBhZGRpbmctbGVmdDogMHB4O1xyXG59XHJcblxyXG4uc2VjdGlvbi1udWRlIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XHJcbiAgICBtYXJnaW4tdG9wOiAyMnB4O1xyXG4gICAgYm9yZGVyLWJvdHRvbTogZ3Jvb3ZlO1xyXG4gICAgYm9yZGVyLXJhZGl1czogOXB4O1xyXG59Il19 */");
 
 /***/ }),
 
@@ -1445,6 +1477,38 @@ var __importDefault = (undefined && undefined.__importDefault) || function (mod)
 
 var ProjectsComponent = /** @class */ (function () {
     function ProjectsComponent() {
+        this.projects = [
+            {
+                "name": "Avengers: Endgame",
+                "tag": "ML",
+                "date": "01-05-2020"
+            },
+            {
+                "name": "Good Boys",
+                "tag": "DL",
+                "date": "02-05-2020"
+            },
+            {
+                "name": "Playmobil: The Movie",
+                "tag": "DS",
+                "date": "03-05-2020"
+            },
+            {
+                "name": "Aquarela",
+                "tag": "NLP",
+                "date": "04-05-2020"
+            },
+            {
+                "name": "Aladdin",
+                "tag": "WS",
+                "date": "05-05-2020"
+            },
+            {
+                "name": "Downton Abbey",
+                "tag": "CV",
+                "date": "06-05-2020"
+            }
+        ];
     }
     ProjectsComponent.prototype.ngOnInit = function () {
     };
