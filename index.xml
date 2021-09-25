@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Sohan Puthran</title>
+    <link>https://sohansputhran.github.io/</link>
+    <description>Recent content in Home on Sohan Puthran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Feb 2018 18:56:13 -0500</lastBuildDate><atom:link href="https://sohansputhran.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preventing the Financing of Terrorism by Engineering an ML Model with Financial Crime Data</title>
+      <link>https://sohansputhran.github.io/projects/ai-terrorism/</link>
+      <pubDate>Wed, 01 Sep 2021 12:41:05 -0500</pubDate>
+      
+      <guid>https://sohansputhran.github.io/projects/ai-terrorism/</guid>
+      <description>Won the “Financial Crime Data Challenge” organized by the UN. Volunteered with a global team of AI engineers, the UN Office of Counter Terrorism and goFintel project, to build and deploy models to identify and prevent financing of terrorism. Performed Exploratory Data Analysis on different datasets for easier understanding of data. Combined multiple datasets and cumulated the findings through different types of graphs. Built a web application using Streamlit to deploy all the models and displayed results of all the data analysis.</description>
+    </item>
+    
+    <item>
+      <title>Will your employees leave you?</title>
+      <link>https://sohansputhran.github.io/blogs/1.employee_churn/</link>
+      <pubDate>Tue, 07 Jul 2020 14:15:59 -0600</pubDate>
+      
+      <guid>https://sohansputhran.github.io/blogs/1.employee_churn/</guid>
+      <description>Built a Regression model to predict the the Attrition Rate of the employees of a given organization. In this hackathon, I got a score of 81.272 which secured me the rank of 209 out of 5264 participants (top 4%) where rank 1 scored 81.699.</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://sohansputhran.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sohansputhran.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml
+[outputs] home = [&amp;#34;HTML&amp;#34;, &amp;#34;JSON&amp;#34;] Searching additional fileds To search additional fields defined in front matter, you must add it in 2 places.</description>
+    </item>
+    
+  </channel>
+</rss>
