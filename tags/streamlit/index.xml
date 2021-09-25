@@ -5,20 +5,11 @@
     <link>https://sohansputhran.github.io/tags/streamlit/</link>
     <description>Recent content in Streamlit on Sohan Puthran</description>
     <generator>Hugo -- gohugo.io</generator>
-<<<<<<< HEAD
     <language>en-us</language><atom:link href="https://sohansputhran.github.io/tags/streamlit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Preventing the Financing of Terrorism by Engineering an ML Model with Financial Crime Data</title>
       <link>https://sohansputhran.github.io/projects/ai-terrorism/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-=======
-    <language>en-us</language>
-    <lastBuildDate>Sat, 01 May 2021 12:41:05 -0500</lastBuildDate><atom:link href="https://sohansputhran.github.io/tags/streamlit/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Preventing the Financing of Terrorism by Engineering an ML Model with Financial Crime Data</title>
-      <link>https://sohansputhran.github.io/projects/ai-terrorism/</link>
-      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
->>>>>>> dcf63e77a5a0bd824955e01c7a78eaee48f1bc6b
       
       <guid>https://sohansputhran.github.io/projects/ai-terrorism/</guid>
       <description>Won the “Financial Crime Data Challenge” organized by the UN. Volunteered with a global team of AI engineers, the UN Office of Counter Terrorism and goFintel project, to build and deploy models to identify and prevent financing of terrorism. Performed Exploratory Data Analysis on different datasets for easier understanding of data. Combined multiple datasets and cumulated the findings through different types of graphs. Built a web application using Streamlit to deploy all the models and displayed results of all the data analysis.</description>
