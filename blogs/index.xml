@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Sohan Puthran</title>
+    <link>https://sohansputhran.github.io/blogs/</link>
+    <description>Recent content in Blogs on Sohan Puthran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 07 Jan 2020 15:00:28 +0000</lastBuildDate><atom:link href="https://sohansputhran.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Will your employees leave you?</title>
+      <link>https://sohansputhran.github.io/blogs/1.employee_churn/</link>
+      <pubDate>Tue, 07 Jul 2020 14:15:59 -0600</pubDate>
+      
+      <guid>https://sohansputhran.github.io/blogs/1.employee_churn/</guid>
+      <description>Built a Regression model to predict the the Attrition Rate of the employees of a given organization. In this hackathon, I got a score of 81.272 which secured me the rank of 209 out of 5264 participants (top 4%) where rank 1 scored 81.699.</description>
+    </item>
+    
+  </channel>
+</rss>

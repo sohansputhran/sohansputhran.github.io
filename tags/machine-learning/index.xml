@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Sohan Puthran</title>
+    <link>https://sohansputhran.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Sohan Puthran</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 May 2021 12:41:05 -0500</lastBuildDate><atom:link href="https://sohansputhran.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preventing the Financing of Terrorism by Engineering an ML Model with Financial Crime Data</title>
+      <link>https://sohansputhran.github.io/projects/ai-terrorism/</link>
+      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
+      
+      <guid>https://sohansputhran.github.io/projects/ai-terrorism/</guid>
+      <description>Won the “Financial Crime Data Challenge” organized by the UN. Volunteered with a global team of AI engineers, the UN Office of Counter Terrorism and goFintel project, to build and deploy models to identify and prevent financing of terrorism. Performed Exploratory Data Analysis on different datasets for easier understanding of data. Combined multiple datasets and cumulated the findings through different types of graphs. Built a web application using Streamlit to deploy all the models and displayed results of all the data analysis.</description>
+    </item>
+    
+  </channel>
+</rss>
