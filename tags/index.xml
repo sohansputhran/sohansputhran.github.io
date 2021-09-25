@@ -5,11 +5,20 @@
     <link>https://sohansputhran.github.io/tags/</link>
     <description>Recent content in Tags on Sohan Puthran</description>
     <generator>Hugo -- gohugo.io</generator>
+<<<<<<< HEAD
     <language>en-us</language><atom:link href="https://sohansputhran.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Data Science</title>
       <link>https://sohansputhran.github.io/tags/data-science/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 May 2021 12:41:05 -0500</lastBuildDate><atom:link href="https://sohansputhran.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data Science</title>
+      <link>https://sohansputhran.github.io/tags/data-science/</link>
+      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
+>>>>>>> dcf63e77a5a0bd824955e01c7a78eaee48f1bc6b
       
       <guid>https://sohansputhran.github.io/tags/data-science/</guid>
       <description></description>
@@ -18,7 +27,11 @@
     <item>
       <title>Machine Learning</title>
       <link>https://sohansputhran.github.io/tags/machine-learning/</link>
+<<<<<<< HEAD
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
+>>>>>>> dcf63e77a5a0bd824955e01c7a78eaee48f1bc6b
       
       <guid>https://sohansputhran.github.io/tags/machine-learning/</guid>
       <description></description>
@@ -27,7 +40,11 @@
     <item>
       <title>Project</title>
       <link>https://sohansputhran.github.io/tags/project/</link>
+<<<<<<< HEAD
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
+>>>>>>> dcf63e77a5a0bd824955e01c7a78eaee48f1bc6b
       
       <guid>https://sohansputhran.github.io/tags/project/</guid>
       <description></description>
@@ -36,7 +53,11 @@
     <item>
       <title>Python</title>
       <link>https://sohansputhran.github.io/tags/python/</link>
+<<<<<<< HEAD
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
+>>>>>>> dcf63e77a5a0bd824955e01c7a78eaee48f1bc6b
       
       <guid>https://sohansputhran.github.io/tags/python/</guid>
       <description></description>
@@ -45,7 +66,11 @@
     <item>
       <title>Streamlit</title>
       <link>https://sohansputhran.github.io/tags/streamlit/</link>
+<<<<<<< HEAD
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+=======
+      <pubDate>Sat, 01 May 2021 12:41:05 -0500</pubDate>
+>>>>>>> dcf63e77a5a0bd824955e01c7a78eaee48f1bc6b
       
       <guid>https://sohansputhran.github.io/tags/streamlit/</guid>
       <description></description>
