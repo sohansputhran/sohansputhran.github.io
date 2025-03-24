@@ -11,7 +11,7 @@ header:
       url: "/projects/"
     - label: "📄 Download Resume"
       url: "/assets/resume.pdf"
-    - labe: "📧 Contact Me"
+    - label: "📧 Contact Me"
       url: "mailto:sohanputhran@gmail.com"
 excerpt: "Turning data into smart, scalable solutions. Open to Data Science & AI roles in Fintech, Healthcare, and Tech."
 ---
@@ -25,7 +25,7 @@ Currently open to exciting opportunities in the **Fintech**, **Healthcare**, and
 ## 🔧 Tech Stack Highlights
 
 - **Programming**: Python | SQL | JavaScript | TypeScript
-- **Machine Learning**: Scikit-learn | TensorFlow | Keras | PyTorch | Deep Learning | NLP | LLMs | Transfer Learning | Recommendation Systems | Marketing Mix Modelin
+- **Machine Learning**: Scikit-learn | TensorFlow | Keras | PyTorch | CV | NLP | LLMs
 - **Data Engineering**: Apache Spark | PySpark | Hadoop | Airflow | Terraform
 - **Data Analysis / Data Science**: Pandas | Numpy | Matplotlib | Seaborn
 - **Cloud & DevOps**: AWS | GCP | Docker | Kubernetes | Snowflake | Azure
