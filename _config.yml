@@ -57,9 +57,9 @@ plugins:
 
 author:
   name   : "Sohan Sanjeeva Puthran"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "assets/images/bio-photo.jpg"
   bio    : "Data Scientist with 3+ years experience in ML, analytics, and AI. Passionate about data, technology, and innovation.
-  location: "Chicaago, IL, USA"
+
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
