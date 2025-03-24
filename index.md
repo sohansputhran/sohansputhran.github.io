@@ -24,14 +24,14 @@ Currently open to exciting opportunities in the **Fintech**, **Healthcare**, and
 
 ## 🔧 Tech Stack Highlights
 
-- **Programming**: Python | SQL | TypeScript | C++
-- **Machine Learning**: Scikit-learn | TensorFlow | Keras | PyTorch | CV | NLP | LLMs
-- **Data Engineering**: PySpark | Hadoop | Airflow | Apache Spark | Terraform
-- **Data Analysis / Data Science**: Pandas | Numpy | Matplotlib | Seaborn
-- **Cloud & DevOps**: AWS | GCP | Snowflake | Azure | Docker | Kubernetes
-- **Version Control**: Git | GitHub
-- **Web Development**: Streamlit | Flask | Jekyll
-- **Other Tools**: VS Code | Excel | Git | Power BI 
+- **Programming**: Python • SQL • TypeScript • C++
+- **Machine Learning**: Scikit-learn • TensorFlow • Keras • PyTorch • CV • NLP • LLMs
+- **Data Engineering**: PySpark • Hadoop • Airflow • Apache Spark • Terraform
+- **Data Analysis / Data Science**: Pandas • Numpy • Matplotlib • Seaborn
+- **Cloud & DevOps**: AWS • GCP • Snowflake • Azure • Docker • Kubernetes
+- **Version Control**: Git • GitHub
+- **Web Development**: Streamlit • Flask • Jekyll
+- **Other Tools**: VS Code • Excel • Git • Power BI 
   
 ---
 
