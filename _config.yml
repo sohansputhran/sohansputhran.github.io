@@ -69,7 +69,7 @@ author:
   name   : "Sohan Sanjeeva Puthran"
   avatar : "assets/images/bio-photo.jpg"
   bio    : "Data Scientist with 3+ years experience in ML, analytics, and AI. Passionate about data, technology, and innovation."
-  location: "Chicago, IL, USA"
+  location: "USA"
   email: "puthran.sohan@gmail.com"
   links:
     - label: "GitHub"
@@ -78,9 +78,6 @@ author:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/sohansputhran/"
-    - label: "Email"
-      icon: "fas fa-envelope"
-      url: "mailto:sohanputhran@gmail.com"
 
 footer:
   links:
