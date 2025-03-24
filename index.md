@@ -1,6 +1,6 @@
 ---
 layout: splash
-title: "Hi, I'm Sohan Puthran"
+title: "Hi, I'm Sohan Sanjeeva Puthran"
 subtitle: "Data Scientist | Machine Learning Engineer | Data Engineer"
 header:
   overlay_color: "#000"
@@ -24,14 +24,14 @@ Currently open to exciting opportunities in the **Fintech**, **Healthcare**, and
 
 ## 🔧 Tech Stack Highlights
 
-- **Programming**: Python | SQL | JavaScript | TypeScript
+- **Programming**: Python | SQL | TypeScript | C++
 - **Machine Learning**: Scikit-learn | TensorFlow | Keras | PyTorch | CV | NLP | LLMs
-- **Data Engineering**: Apache Spark | PySpark | Hadoop | Airflow | Terraform
+- **Data Engineering**: PySpark | Hadoop | Airflow | Apache Spark | Terraform
 - **Data Analysis / Data Science**: Pandas | Numpy | Matplotlib | Seaborn
-- **Cloud & DevOps**: AWS | GCP | Docker | Kubernetes | Snowflake | Azure
+- **Cloud & DevOps**: AWS | GCP | Snowflake | Azure | Docker | Kubernetes
 - **Version Control**: Git | GitHub
 - **Web Development**: Streamlit | Flask | Jekyll
-- **Other Tools**: Git | Power BI | VS Code | Excel
+- **Other Tools**: VS Code | Excel | Git | Power BI 
   
 ---
 
