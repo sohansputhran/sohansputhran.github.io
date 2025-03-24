@@ -16,7 +16,8 @@
 title: Sohan Sanjeeva Puthran
 email: puthran.sohan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Data Scientist | AI/ML Enthusiast | Data Engineer | Data Analyst | Data Visualizer | Data Storyteller
+  Data Scientist | Machine Learning | Data Engineering  
+  Passionate about solving real-world problems through AI and analytics.
 github_username: sohansputhran
 linkedin_username: sohansputhran
 minimal_mistakes_skin: default
@@ -25,11 +26,20 @@ search: true
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+
+# kramdown:
+#   input: GFM
+# permalink: /:title/
+# collections_dir: collections
+
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Pagination
+paginate: 6
+# paginate_path: /page:num/
 
 include:
   - _pages
@@ -58,18 +68,19 @@ plugins:
 author:
   name   : "Sohan Sanjeeva Puthran"
   avatar : "assets/images/bio-photo.jpg"
-  bio    : "Data Scientist with 3+ years experience in ML, analytics, and AI. Passionate about data, technology, and innovation.
-
+  bio    : "Data Scientist with 3+ years experience in ML, analytics, and AI. Passionate about data, technology, and innovation."
+  location: "Chicago, IL, USA"
+  email: "puthran.sohan@gmail.com"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://sohansputhran.github.io/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sohansputhran"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/sohansputhran/"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:sohanputhran@gmail.com"
 
 footer:
   links:
@@ -79,6 +90,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/sohansputhran/"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:sohanputhran@gmail.com"
 
 defaults:
   # _posts
@@ -92,6 +106,7 @@ defaults:
       comments: true
       share: true
       related: true
+
   # _pages
   - scope:
       path: "_pages"
@@ -106,3 +121,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# Social image preview
+# logo: "/assets/images/logo.png"
