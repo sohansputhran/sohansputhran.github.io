@@ -1,8 +1,28 @@
 ---
+layout: single
+title: "About Me"
 permalink: /about/
-title: "About"
+author_profile: true
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+I'm **Sohan Sanjeeva Puthran**, a Data Scientist with 3+ years of experience developing AI/ML solutions and scalable data systems.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+I specialize in:
+- Building ML models for classification, prediction, and automation
+- Engineering robust data pipelines with tools like Airflow and Terraform
+- Communicating insights with clear visualizations and dashboards
+
+### 🔍 Areas of Focus
+- Machine Learning & Deep Learning
+- Time Series Forecasting
+- Data Engineering
+- Natural Language Processing
+- Fintech, Healthcare, and Analytics
+
+### 🎯 Career Goals
+I'm currently seeking opportunities where I can contribute to **data-driven product development**, **automated intelligence**, and **impactful business decisions**.
+
+### 🛠️ Tools I Use
+Python • SQL • Snowflake • AWS • Azure • Git • Pandas • Scikit-learn • NumPy • Airflow • Tableau • Streamlit
+
+Feel free to explore my [projects](/projects/) or [connect with me](mailto:sohanputhran@gmail.com).
