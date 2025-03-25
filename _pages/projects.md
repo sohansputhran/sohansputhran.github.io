@@ -49,4 +49,29 @@ author_profile: false
 .archive__item {
   transition: opacity 0.3s ease;
 }
+
+.tag-badge {
+  display: inline-block;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 5px 10px;
+  margin: 3px 5px 0 0;
+  font-size: 0.85rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.archive__item.highlight {
+  animation: glow 0.3s ease;
+  border: 1px solid #007acc;
+  box-shadow: 0 0 8px rgba(0, 122, 204, 0.2);
+}
+@keyframes glow {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1);
+  }
+}
 </style>

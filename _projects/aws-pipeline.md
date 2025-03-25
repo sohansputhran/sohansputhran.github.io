@@ -7,3 +7,8 @@ repo: https://github.com/sohansputhran/aws-data-pipeline
 ---
 
 Built an event-driven pipeline to process and transform raw files into analytics-ready datasets using AWS services.
+
+**Tags:**  
+{% for tag in page.tags %}
+<span class="tag-badge">{{ tag }}</span>
+{% endfor %}

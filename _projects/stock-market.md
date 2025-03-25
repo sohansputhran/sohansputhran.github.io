@@ -7,3 +7,8 @@ repo: https://github.com/sohansputhran/stock-market-dashboard
 ---
 
 Forecasting project for stock trends, built with MLOps tools.
+
+**Tags:**  
+{% for tag in page.tags %}
+<span class="tag-badge">{{ tag }}</span>
+{% endfor %}

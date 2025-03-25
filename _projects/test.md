@@ -5,3 +5,8 @@ tags: [test]
 ---
 
 Hello world from the projects collection!
+
+**Tags:**  
+{% for tag in page.tags %}
+<span class="tag-badge">{{ tag }}</span>
+{% endfor %}

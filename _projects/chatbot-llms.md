@@ -7,3 +7,8 @@ repo: https://github.com/sohansputhran/chatbot-leadgen
 ---
 
 Designed a conversational AI assistant to engage users, qualify leads, and send structured data to CRM tools.
+
+**Tags:**  
+{% for tag in page.tags %}
+<span class="tag-badge">{{ tag }}</span>
+{% endfor %}
