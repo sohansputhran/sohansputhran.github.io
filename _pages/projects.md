@@ -10,6 +10,7 @@ css:
   - /assets/css/custom.css
 ---
 
+<!-- Filter Buttons -->
 <div class="filter-bar">
   <button class="tag-filter" data-filter="all">All</button>
   <button class="tag-filter" data-filter="Machine Learning">Machine Learning</button>
@@ -18,5 +19,7 @@ css:
   <button class="tag-filter" data-filter="NLP">NLP</button>
   <button class="tag-filter" data-filter="Data Engineering">Data Engineering</button>
 </div>
+
+<!-- The project cards will be rendered below by the collection layout -->
 
 <script src="/assets/js/filter-projects.js"></script>

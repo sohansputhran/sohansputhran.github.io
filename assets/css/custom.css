@@ -27,17 +27,6 @@
     transition: opacity 0.3s ease;
   }
   
-  .tag-badge {
-    display: inline-block;
-    background-color: #f2f2f2;
-    color: #333;
-    padding: 5px 10px;
-    margin: 3px 5px 0 0;
-    font-size: 0.85rem;
-    border-radius: 12px;
-    font-weight: 500;
-  }
-  
   .archive__item.highlight {
     animation: glow 0.3s ease;
     border: 1px solid #007acc;
@@ -52,26 +41,38 @@
     }
   }
   
-  /* ✅ Always-visible card borders */
+/* Base styling for project cards */
 .archive__item {
-  border: 1px solid #ccc;
+  border: 1px solid #ddd; /* Light grey border */
   border-radius: 12px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
 
-/* ✨ Glow + blue border for matching filtered cards */
-.archive__item.highlight {
-  border: 2px solid #007acc;
-  box-shadow: 0 0 16px rgba(0, 122, 204, 0.2);
-  transform: scale(1.01);
-  z-index: 1;
-}
-
-/* 🖱 Optional: Hover effect for better UX */
+/* Hover effect for project cards */
 .archive__item:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Highlighted state for filtered project cards */
+.archive__item.highlight {
+  border: 2px solid #007acc; /* Blue border */
+  box-shadow: 0 0 16px rgba(0, 122, 204, 0.25);
+  transform: scale(1.02);
+}
+
+/* Styling for tag badges within project cards */
+.tag-badge {
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  font-weight: 500;
 }
