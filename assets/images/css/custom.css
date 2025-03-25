@@ -52,23 +52,26 @@
     }
   }
   
-  .archive__item {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    transition: all 0.3s ease;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
-  }
-  
-  .archive__item.highlight {
-    border: 2px solid #007acc;
-    box-shadow: 0 0 12px rgba(0, 122, 204, 0.2);
-    transform: scale(1.02);
-    transition: all 0.3s ease;
-  }
+  /* ✅ Always-visible card borders */
+.archive__item {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
 
-  .archive__item:hover {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
-  }
+/* ✨ Glow + blue border for matching filtered cards */
+.archive__item.highlight {
+  border: 2px solid #007acc;
+  box-shadow: 0 0 16px rgba(0, 122, 204, 0.2);
+  transform: scale(1.01);
+  z-index: 1;
+}
+
+/* 🖱 Optional: Hover effect for better UX */
+.archive__item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}

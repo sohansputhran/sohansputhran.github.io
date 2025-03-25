@@ -10,25 +10,27 @@ document.addEventListener("DOMContentLoaded", function () {
       button.addEventListener("click", () => {
         const selected = button.getAttribute("data-filter");
   
-        // Active state for buttons
+        // Highlight active button
         filterButtons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
   
-        // Sort: matching cards first
-        const sorted = cards.slice().sort((a, b) => {
-          const aMatch = a.innerText.includes(selected);
-          const bMatch = b.innerText.includes(selected);
-          return (bMatch === selected) - (aMatch === selected);
+        // Sort: matched cards first, then unmatched
+        const matched = [];
+        const unmatched = [];
+  
+        cards.forEach(card => {
+          const isMatch = selected === "all" || card.innerText.includes(selected);
+          if (isMatch) {
+            card.classList.add("highlight");
+            matched.push(card);
+          } else {
+            card.classList.remove("highlight");
+            unmatched.push(card);
+          }
         });
   
-        // Clear grid and re-add cards
-        grid.innerHTML = "";
-        sorted.forEach(card => {
-          // Highlight matched cards
-          const isMatch = selected === "all" || card.innerText.includes(selected);
-          card.classList.toggle("highlight", isMatch);
-          grid.appendChild(card);
-        });
+        // Re-append cards in new order (matched first)
+        [...matched, ...unmatched].forEach(card => grid.appendChild(card));
       });
     });
   });

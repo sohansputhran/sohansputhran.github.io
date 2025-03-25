@@ -6,8 +6,6 @@ collection: projects
 entries_layout: grid
 classes: wide
 author_profile: false
-css:
-  - /assets/css/custom.css
 ---
 
 <div class="filter-bar">
@@ -18,6 +16,5 @@ css:
   <button class="tag-filter" data-filter="NLP">NLP</button>
   <button class="tag-filter" data-filter="Data Engineering">Data Engineering</button>
 </div>
-
 
 <script src="/assets/js/filter-projects.js"></script>
