@@ -6,6 +6,8 @@ collection: projects
 entries_layout: grid
 classes: wide
 author_profile: false
+css:
+  - /assets/css/custom.css
 ---
 
 <div class="filter-bar">

@@ -1,32 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".tag-filter");
-    const projectGrid = document.querySelector(".archive");
-    const cards = Array.from(document.querySelectorAll(".archive__item"));
+    const grid = document.querySelector(".archive");
+  
+    if (!grid) return;
+  
+    const cards = Array.from(grid.querySelectorAll(".archive__item"));
   
     filterButtons.forEach(button => {
       button.addEventListener("click", () => {
         const selected = button.getAttribute("data-filter");
   
-        // Highlight the active button
+        // Active state for buttons
         filterButtons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
   
-        // Sort cards: matched first
-        const sorted = cards.sort((a, b) => {
+        // Sort: matching cards first
+        const sorted = cards.slice().sort((a, b) => {
           const aMatch = a.innerText.includes(selected);
           const bMatch = b.innerText.includes(selected);
           return (bMatch === selected) - (aMatch === selected);
         });
   
-        // Clear grid and re-append in sorted order
-        projectGrid.innerHTML = "";
+        // Clear grid and re-add cards
+        grid.innerHTML = "";
         sorted.forEach(card => {
-          if (selected === "all" || card.innerText.includes(selected)) {
-            card.classList.add("highlight");
-          } else {
-            card.classList.remove("highlight");
-          }
-          projectGrid.appendChild(card);
+          // Highlight matched cards
+          const isMatch = selected === "all" || card.innerText.includes(selected);
+          card.classList.toggle("highlight", isMatch);
+          grid.appendChild(card);
         });
       });
     });
