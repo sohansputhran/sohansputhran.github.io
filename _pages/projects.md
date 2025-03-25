@@ -23,7 +23,9 @@ author_profile: false
 <style>
 .filter-bar {
   margin-bottom: 20px;
+  text-align: center;
 }
+
 .tag-filter {
   margin: 5px;
   padding: 8px 15px;
@@ -31,9 +33,20 @@ author_profile: false
   border-radius: 20px;
   background-color: #f0f0f0;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
+
 .tag-filter:hover {
   background-color: #007acc;
   color: #fff;
+}
+
+.tag-filter.active {
+  background-color: #007acc;
+  color: white;
+}
+
+.archive__item {
+  transition: opacity 0.3s ease;
 }
 </style>
