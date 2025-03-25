@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
       button.addEventListener("click", () => {
         const selected = button.getAttribute("data-filter");
   
-        // Toggle active button
+        // Highlight active button
         buttons.forEach(btn => btn.classList.remove("active"));
         button.classList.add("active");
   
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.classList.toggle("highlight", isMatch);
         });
   
-        // 🪄 Re-trigger layout recalculation (Masonry/grid fix)
+        // 🔧 Trigger Masonry/Flexbox layout recalculation
         setTimeout(() => {
           window.dispatchEvent(new Event("resize"));
         }, 100);
