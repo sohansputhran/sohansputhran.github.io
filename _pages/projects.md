@@ -29,18 +29,18 @@ author_profile: true
   }
   
 .tag-filter {
-margin: 5px;
-padding: 8px 15px;
-border: none;
-border-radius: 20px;
-background-color: #f0f0f0;
-cursor: pointer;
-transition: background 0.2s ease;
+  padding: 8px 14px;
+  margin: 5px;
+  border: none;
+  border-radius: 20px;
+  background: #f0f0f0;
+  cursor: pointer;
 }
 
+.tag-filter.active,
 .tag-filter:hover {
-background-color: #007acc;
-color: #fff;
+  background-color: #007acc;
+  color: white;
 }
 
 .tag-filter.active {
@@ -59,12 +59,12 @@ to {
   
 /* Base styling for project cards */
 .archive__item {
-  border: 1px solid #ddd; /* Light grey border */
+  transition: all 0.3s ease;
+  border: 1px solid #ddd;
   border-radius: 12px;
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
   margin-bottom: 20px;
 }
 
