@@ -19,3 +19,21 @@ author_profile: false
 
 
 <script src="/assets/js/filter-projects.js"></script>
+
+<style>
+.filter-bar {
+  margin-bottom: 20px;
+}
+.tag-filter {
+  margin: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+.tag-filter:hover {
+  background-color: #007acc;
+  color: #fff;
+}
+</style>
