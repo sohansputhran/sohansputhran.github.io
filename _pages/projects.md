@@ -59,13 +59,12 @@ to {
   
 /* Base styling for project cards */
 .archive__item {
-  transition: all 0.3s ease;
-  border: 1px solid #ddd;
+  border: 1px solid #ccc;
   border-radius: 12px;
   padding: 20px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
 }
 
 /* Hover effect for project cards */
@@ -77,7 +76,7 @@ to {
 /* Highlighted state for filtered project cards */
 .archive__item.highlight {
   border: 2px solid #007acc;
-  box-shadow: 0 0 16px rgba(0, 122, 204, 0.25);
+  box-shadow: 0 0 12px rgba(0, 122, 204, 0.25);
   transform: scale(1.02);
 }
 
