@@ -8,7 +8,7 @@ classes: wide
 author_profile: true
 ---
 
-<div class="filter-bar">
+<!-- <div class="filter-bar">
   <label for="tagDropdown">Filter by tag:</label>
   <select id="tagDropdown" class="tag-dropdown">
     <option value="all">All</option>
@@ -18,7 +18,7 @@ author_profile: true
     <option value="NLP">NLP</option>
     <option value="Data Engineering">Data Engineering</option>
   </select>
-</div>
+</div> -->
 
 <script src="/assets/js/filter-projects.js"></script>
 
