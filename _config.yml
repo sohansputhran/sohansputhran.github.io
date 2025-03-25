@@ -119,18 +119,11 @@ defaults:
     values:
       layout: single
       author_profile: true
-  
-  # CSS
-  - scope:
-      path: ""
-      type: "pages"
-      values:
-      css:
-        - /assets/css/custom.css
 
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/
