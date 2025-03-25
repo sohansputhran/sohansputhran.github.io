@@ -126,7 +126,7 @@ defaults:
       type: "pages"
       values:
       css:
-        - "/assets/css/custom.css"
+        - /assets/css/custom.css
 
 category_archive:
   type: liquid
