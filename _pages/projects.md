@@ -8,25 +8,33 @@ classes: wide
 author_profile: true
 ---
 
-<!-- Filter Buttons -->
 <div class="filter-bar">
-  <button class="tag-filter" data-filter="all">All</button>
-  <button class="tag-filter" data-filter="Machine Learning">Machine Learning</button>
-  <button class="tag-filter" data-filter="Streamlit">Streamlit</button>
-  <button class="tag-filter" data-filter="AWS">AWS</button>
-  <button class="tag-filter" data-filter="NLP">NLP</button>
-  <button class="tag-filter" data-filter="Data Engineering">Data Engineering</button>
+  <label for="tagDropdown">Filter by tag:</label>
+  <select id="tagDropdown" class="tag-dropdown">
+    <option value="all">All</option>
+    <option value="Machine Learning">Machine Learning</option>
+    <option value="Streamlit">Streamlit</option>
+    <option value="AWS">AWS</option>
+    <option value="NLP">NLP</option>
+    <option value="Data Engineering">Data Engineering</option>
+  </select>
 </div>
-
-<!-- The project cards will be rendered below by the collection layout -->
 
 <script src="/assets/js/filter-projects.js"></script>
 
 <style>
 .filter-bar {
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tag-dropdown {
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
   
 .tag-filter {
   padding: 8px 14px;
