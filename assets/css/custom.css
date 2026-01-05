@@ -1,0 +1,71 @@
+/* Simple, content-first cards + tags */
+.section {
+  margin: 1.75rem 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 1rem;
+  background: rgba(255,255,255,0.02);
+}
+
+.card h3, .card h4 {
+  margin: 0 0 .5rem 0;
+}
+
+.card p {
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid rgba(0,0,0,0.18);
+  border-radius: 999px;
+  margin: 0 .35rem .35rem 0;
+  cursor: pointer;
+}
+
+.tag[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+.muted {
+  opacity: 0.85;
+}
+
+.cta-row {
+  display: flex;
+  gap: .75rem;
+  flex-wrap: wrap;
+  margin-top: .75rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.55rem 0.9rem;
+  border-radius: 8px;
+  /* border: 1px solid rgba(0,0,0,0.18); */
+  text-decoration: none;
+}
+
+.btn.primary {
+  font-weight: 700;
+}
+
+.kv {
+  margin: 0.25rem 0;
+}
+
+.kv strong {
+  display: inline-block;
+  min-width: 86px;
+}
