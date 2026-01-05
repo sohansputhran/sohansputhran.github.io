@@ -41,7 +41,7 @@ search: false
 # === Author settings ===
 author:
   name   : "Sohan Sanjeeva Puthran"
-  avatar : "assets/images/bio-photo.jpg"
+  avatar : "assets/images/bio-photo.png"
   bio    : "Data Scientist / AI-ML Engineer passionate about leveraging data to drive impactful solutions."
   location: "India"
   email: "puthran.sohan@gmail.com"
@@ -78,6 +78,7 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       comments: false
