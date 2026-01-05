@@ -16,24 +16,69 @@ header:
 excerpt: "Turning data into smart, scalable solutions. Open to Data Science & AI roles in Fintech, Healthcare, and Tech."
 ---
 
-I'm a data scientist with over 3 years of experience in building end-to-end AI/ML solutions and data platforms.
+<section class="section">
+  <h1>Data Scientist / AI-ML Engineer</h1>
+  <p class="muted">
+    I build practical ML + data solutions, from experimentation to deployment, focused on measurable outcomes and clear communication.
+  </p>
+</section>
 
-I combine **machine learning**, **analytics**, and **data engineering** to solve real-world problems and drive business value.
+<section class="section">
+  <h2>🔧 Tech Stack Highlights</h2>
+  <ul>
+    <li><strong>Programming:</strong> Python • SQL • TypeScript • C++</li>
+    <li><strong>Machine Learning:</strong> Scikit-learn • TensorFlow • Keras • PyTorch • CV • NLP • LLMs</li>
+    <li><strong>Data Engineering:</strong> PySpark • Hadoop • Airflow • Apache Spark • Terraform</li>
+    <li><strong>Data Analysis / Data Science:</strong> Pandas • Numpy • Matplotlib • Seaborn</li>
+    <li><strong>Cloud & DevOps:</strong> AWS • GCP • Snowflake • Azure • Docker • Kubernetes</li>
+    <li><strong>Version Control:</strong> Git • GitHub</li>
+    <li><strong>Web Development:</strong> Streamlit • Flask • Jekyll</li>
+    <li><strong>Other Tools:</strong> VS Code • Excel • Git • Power BI</li>
+  </ul>
+</section>  
 
-Currently open to exciting opportunities in the **Fintech**, **Healthcare**, and **AI/ML** space.
+<section class="section">
+  <h2>Featured Projects</h2>
+  <div class="card-grid">
+    {% assign featured = site.projects | where: "featured", true | sort: "date" | reverse %}
+    {% for p in featured limit: 6 %}
+      <div class="card" data-tags="{{ p.tags | join: ',' }}">
+        <h3><a href="{{ p.url | relative_url }}">{{ p.title }}</a></h3>
+        <p class="muted">{{ p.short_description }}</p>
+        <p class="kv"><strong>Stack:</strong> {{ p.stack | join: " • " }}</p>
+        <div>
+          {% for t in p.tags %}
+            <span class="tag" aria-pressed="false">{{ t }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 
-## 🔧 Tech Stack Highlights
+  <p style="margin-top:1rem;">
+    <a href="{{ '/projects/' | relative_url }}">All projects →</a>
+  </p>
+</section>
 
-- **Programming**: Python • SQL • TypeScript • C++
-- **Machine Learning**: Scikit-learn • TensorFlow • Keras • PyTorch • CV • NLP • LLMs
-- **Data Engineering**: PySpark • Hadoop • Airflow • Apache Spark • Terraform
-- **Data Analysis / Data Science**: Pandas • Numpy • Matplotlib • Seaborn
-- **Cloud & DevOps**: AWS • GCP • Snowflake • Azure • Docker • Kubernetes
-- **Version Control**: Git • GitHub
-- **Web Development**: Streamlit • Flask • Jekyll
-- **Other Tools**: VS Code • Excel • Git • Power BI 
-  
----
+<section class="section">
+  <h2>Certifications</h2>
+  {% assign certs = site.data.certifications | sort: "date" | reverse %}
+  <div class="card-grid">
+    {% for c in certs limit: 3 %}
+      <div class="card">
+        <h4>{{ c.title }}</h4>
+        <p class="muted">{{ c.issuer }} • {{ c.date }}</p>
+        {% if c.url and c.url != "" %}
+          <p><a href="{{ c.url }}">Verify</a></p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <p style="margin-top:1rem;">
+    <a href="{{ '/about/' | relative_url }}#certifications">All certifications →</a>
+  </p>
+</section>
 
 ## 💡 Why Work With Me?
 
@@ -44,4 +89,3 @@ I bring a rare blend of **analytical mindset** and **software engineering skills
 - Drive measurable impact for teams and customers
 
 Let's connect! 🚀
-

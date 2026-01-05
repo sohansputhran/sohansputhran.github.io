@@ -1,44 +1,49 @@
-# Site settings
-title: Sohan Sanjeeva Puthran
-email: puthran.sohan@gmail.com
+# ==== Site settings ====
+title: "Sohan Sanjeeva Puthran"
+title_separator: "-"
+name: "Sohan Sanjeeva Puthran"
+email: "puthran.sohan@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Data Scientist | Machine Learning | Data Engineering  
   Passionate about solving real-world problems through AI and analytics.
+url: "https://sohansputhran.github.io"
+baseurl: "" # keep blank for user.github.io
 github_username: sohansputhran
 linkedin_username: sohansputhran
 minimal_mistakes_skin: default
 search: true
 
-# Build settings
+# === Build settings ===
+# Theme (Minimal Mistakes via remote_theme is GitHub Pages friendly)
+remote_theme: "mmistakes/minimal-mistakes"
+
+# === Outputting settings ===
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-
-# Outputting
-permalink: /:categories/:title/
-paginate_path: /page:num/
-# timezone: America/Chicago
-
-# Pagination
-# paginate: 6
+# permalink: /:categories/:title/
 # paginate_path: /page:num/
 
 include:
   - _pages
 
-# Plugins (previously gems:)
+# Plugins allowed on GitHub Pages commonly include sitemap/feed/seo-tag/include-cache
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
   - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
+# Minimal Mistakes settings
+minimal_mistakes_skin: "default"
+locale: "en-US"
+
+search: false
+
+# === Author settings ===
 author:
   name   : "Sohan Sanjeeva Puthran"
   avatar : "assets/images/bio-photo.jpg"
-  bio    : "Data Scientist with 3+ years experience in ML, analytics, and AI. Passionate about data, technology, and innovation."
-  location: "USA"
+  bio    : "Data Scientist / AI-ML Engineer passionate about leveraging data to drive impactful solutions."
+  location: "India"
   email: "puthran.sohan@gmail.com"
   links:
     - label: "GitHub"
@@ -60,6 +65,12 @@ footer:
       icon: "fas fa-envelope"
       url: "mailto:sohanputhran@gmail.com"
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  
 defaults:
   # Pages in _pages
   - scope:
@@ -68,7 +79,9 @@ defaults:
     values:
       layout: single
       author_profile: false
-      classes: wide
+      read_time: false
+      comments: false
+      share: false
 
   # Project collection items in _projects
   - scope:
@@ -76,15 +89,11 @@ defaults:
       type: projects
     values:
       layout: single
+      classes: wide
       author_profile: false
       read_time: false
       comments: false
       share: false
-      related: false
-      classes: wide
-      sidebar: false
-      toc: false
-
 
 category_archive:
   type: liquid
@@ -94,10 +103,10 @@ tag_archive:
   type: liquid
   path: /tags/
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:path/
-
-# Social image preview
-# logo: "/assets/images/logo.png"
+# === Exclude files from the build ===
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
