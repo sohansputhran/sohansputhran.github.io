@@ -2,27 +2,46 @@
 layout: single
 title: "About Me"
 permalink: /about/
+description: "Professional summary, skills, education, and certifications."
 author_profile: true
+classes: wide
 ---
 
-I'm **Sohan Sanjeeva Puthran**, a Data Scientist with 3+ years of experience developing AI/ML solutions and scalable data systems.
+## Summary
+I build ML and analytics solutions with a strong emphasis on clean data, measurable evaluation, and production readiness. I enjoy simplifying complex systems, making outputs interpretable, pipelines maintainable, and results useful to both technical and non-technical stakeholders.
 
-I specialize in:
-- Building ML models for classification, prediction, and automation
-- Engineering robust data pipelines with tools like Airflow and Terraform
-- Communicating insights with clear visualizations and dashboards
+## Skills
+- **Programming**: Python • SQL • TypeScript • C++
+- **Machine Learning**: Scikit-learn • TensorFlow • Keras • PyTorch • CV • NLP • LLMs
+- **Data Engineering**: PySpark • Hadoop • Airflow • Apache Spark • Terraform
+- **Data Analysis / Data Science**: Pandas • Numpy • Matplotlib • Seaborn
+- **Cloud & DevOps**: AWS • GCP • Snowflake • Azure • Docker • Kubernetes
+- **Version Control**: Git • GitHub
+- **Web Development**: Streamlit • Flask • Jekyll
+- **Other Tools**: VS Code • Excel • Git • Power BI 
 
-### 🔍 Areas of Focus
-- Machine Learning & Deep Learning
-- Time Series Forecasting
-- Data Engineering
-- Natural Language Processing
-- Fintech, Healthcare, and Analytics
+## Experience Snapshot
+- Designed and delivered end-to-end data and machine learning solutions, covering problem framing, data ingestion, feature engineering, model training, evaluation, and deployment-ready outputs.
+- Built reproducible data pipelines and analytics workflows to transform raw, noisy data into reliable inputs for modeling, reporting, and decision-making.
+- Developed and evaluated machine learning models with a strong focus on appropriate metrics, validation strategies, and interpretability to support trustworthy results.
+- Collaborated with cross-functional stakeholders by translating ambiguous requirements into clear technical approaches, experiments, and actionable insights.
+- Packaged solutions into usable artifacts such as dashboards, APIs, notebooks, and documentation to enable adoption, maintenance, and iteration.
 
-### 🎯 Career Goals
-I'm currently seeking opportunities where I can contribute to **data-driven product development**, **automated intelligence**, and **impactful business decisions**.
+## Education
+- **Master of Science in Data Science/Artificial Intelligence**, Campbellsville University (USA), 2024-26
+- **Master of Data Science**, Illinois Institute of Technology (USA), 2019-21
+- **Bachelor of Computer Science and Engineering**, Visvesvaraya Technological University (India), 2013-17
 
-### 🛠️ Tools I Use
-Python • SQL • Snowflake • AWS • Azure • Git • Pandas • Scikit-learn • NumPy • Airflow • Tableau • Streamlit
-
-Feel free to explore my [projects](/projects/) or [connect with me](mailto:sohanputhran@gmail.com).
+## Certifications {#certifications}
+<div class="card-grid">
+  {% assign certs = site.data.certifications | sort: "date" | reverse %}
+  {% for c in certs %}
+    <div class="card">
+      <h4>{{ c.title }}</h4>
+      <p class="muted">{{ c.issuer }} • {{ c.date }}</p>
+      {% if c.url and c.url != "" %}
+        <p><a href="{{ c.url }}">Verify</a></p>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>

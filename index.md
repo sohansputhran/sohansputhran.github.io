@@ -5,7 +5,7 @@ subtitle: "Data Scientist | Machine Learning Engineer | Data Engineer"
 header:
   overlay_color: "#000"
   overlay_filter: "0.3"
-  overlay_image: /assets/images/banner.jpg
+  # overlay_image: /assets/images/banner.jpg
   actions:
     - label: "💼 View My Projects"
       url: "/projects/"
