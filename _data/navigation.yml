@@ -1,21 +1,9 @@
 main:
   - title: "Home"
     url: /
-
   - title: "About"
     url: /about/
-
-  # - title: "Portfolio"
-  #   children:
-  #     - title: "Projects"
-  #       url: /projects/
-  #     - title: "Blog"
-  #       url: /blog/
-
   - title: "Projects"
     url: /projects/
-  - title: "Resume"
-    url: /assets/resume.pdf
-
   - title: "Contact"
     url: /contact/

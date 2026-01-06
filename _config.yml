@@ -1,75 +1,49 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Sohan Sanjeeva Puthran
-email: puthran.sohan@gmail.com
+# ==== Site settings ====
+title: "Sohan Sanjeeva Puthran"
+title_separator: "-"
+name: "Sohan Sanjeeva Puthran"
+email: "puthran.sohan@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
   Data Scientist | Machine Learning | Data Engineering  
   Passionate about solving real-world problems through AI and analytics.
+url: "https://sohansputhran.github.io"
+baseurl: "" # keep blank for user.github.io
 github_username: sohansputhran
 linkedin_username: sohansputhran
 minimal_mistakes_skin: default
 search: true
 
-# Build settings
+# === Build settings ===
+# Theme (Minimal Mistakes via remote_theme is GitHub Pages friendly)
+remote_theme: "mmistakes/minimal-mistakes"
+
+# === Outputting settings ===
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-
-# kramdown:
-#   input: GFM
-# permalink: /:title/
-# collections_dir: collections
-
-# Outputting
-permalink: /:categories/:title/
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
-# Pagination
-paginate: 6
+# permalink: /:categories/:title/
 # paginate_path: /page:num/
 
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Plugins allowed on GitHub Pages commonly include sitemap/feed/seo-tag/include-cache
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
   - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
+# Minimal Mistakes settings
+minimal_mistakes_skin: "default"
+locale: "en-US"
+
+search: false
+
+# === Author settings ===
 author:
   name   : "Sohan Sanjeeva Puthran"
-  avatar : "assets/images/bio-photo.jpg"
-  bio    : "Data Scientist with 3+ years experience in ML, analytics, and AI. Passionate about data, technology, and innovation."
-  location: "USA"
+  avatar : "assets/images/bio-photo.png"
+  bio    : "Data Scientist / AI-ML Engineer passionate about leveraging data to drive impactful solutions."
+  location: "India"
   email: "puthran.sohan@gmail.com"
   links:
     - label: "GitHub"
@@ -91,22 +65,37 @@ footer:
       icon: "fas fa-envelope"
       url: "mailto:sohanputhran@gmail.com"
 
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  
 defaults:
-  # _pages
+  # Pages in _pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
-      author_profile: true
+      classes: wide
+      author_profile: false
+      read_time: false
+      comments: false
+      share: false
 
-  # _projects
+  # Project collection items in _projects
   - scope:
-      path: "_projects"
+      path: ""
       type: projects
     values:
-      layout: single
+      layout: project
       author_profile: true
+      classes: wide
+      related: false
+      share: false
+      toc: false
+
 
 category_archive:
   type: liquid
@@ -116,10 +105,10 @@ tag_archive:
   type: liquid
   path: /tags/
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-
-# Social image preview
-# logo: "/assets/images/logo.png"
+# === Exclude files from the build ===
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor

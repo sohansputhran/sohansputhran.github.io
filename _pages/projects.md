@@ -1,102 +1,41 @@
 ---
-layout: collection
 title: "Projects"
 permalink: /projects/
-collection: projects
-entries_layout: grid
-classes: wide
+layout: single
+classes: wide projects-clean
 author_profile: true
+toc: false
+related: false
 ---
 
-<!-- <div class="filter-bar">
-  <label for="tagDropdown">Filter by tag:</label>
-  <select id="tagDropdown" class="tag-dropdown">
-    <option value="all">All</option>
-    <option value="Machine Learning">Machine Learning</option>
-    <option value="Streamlit">Streamlit</option>
-    <option value="AWS">AWS</option>
-    <option value="NLP">NLP</option>
-    <option value="Data Engineering">Data Engineering</option>
-  </select>
-</div> -->
+<p class="muted">Browse projects by tag.</p>
 
-<script src="/assets/js/filter-projects.js"></script>
+<div id="tag-bar" style="margin:1rem 0;"></div>
 
-<style>
-.filter-bar {
-  margin-bottom: 20px;
-  text-align: center;
-}
+<div id="projects-grid" class="card-grid">
+  {% assign projects_sorted = site.projects | sort: "date" | reverse %}
+  {% for p in projects_sorted %}
+    <article class="card project-card" data-tags="{{ p.tags | join: ',' | downcase }}">
+      <h3>
+        <!-- If you want click to open repo instead of project page, switch the href below -->
+        <a href="{{ p.repo_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+      </h3>
+      <p class="muted">{{ p.short_description }}</p>
 
-.tag-dropdown {
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-}
-  
-.tag-filter {
-  padding: 8px 14px;
-  margin: 5px;
-  border: none;
-  border-radius: 20px;
-  background: #f0f0f0;
-  cursor: pointer;
-}
+      <!-- <p class="kv"><strong>Stack:</strong> {{ p.stack | join: " • " }}</p> -->
 
-.tag-filter.active,
-.tag-filter:hover {
-  background-color: #007acc;
-  color: white;
-}
+      <div>
+        {% for t in p.tags %}
+          <button class="tag tag-btn" type="button" aria-pressed="false" data-tag="{{ t | downcase }}">{{ t }}</button>
+        {% endfor %}
+      </div>
 
-.tag-filter.active {
-background-color: #007acc;
-color: white;
-}
+      <p style="margin-top:.5rem;">
+        {% if p.repo_url %}<a href="{{ p.repo_url }}" target="_blank" rel="noopener">Repo</a>{% endif %}
+        {% if p.demo_url and p.demo_url != "" %} • <a href="{{ p.demo_url }}" target="_blank" rel="noopener">Demo</a>{% endif %}
+      </p>
+    </article>
+  {% endfor %}
+</div>
 
-@keyframes glow {
-from {
-    transform: scale(1.02);
-}
-to {
-    transform: scale(1);
-}
-}
-  
-/* Base styling for project cards */
-.archive__item {
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-/* Hover effect for project cards */
-.archive__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-
-/* Highlighted state for filtered project cards */
-.archive__item.highlight {
-  border: 2px solid #007acc;
-  box-shadow: 0 0 12px rgba(0, 122, 204, 0.25);
-  transform: scale(1.02);
-}
-
-/* Styling for tag badges within project cards */
-.tag-badge {
-  display: inline-block;
-  background-color: #f0f0f0;
-  color: #333;
-  padding: 5px 10px;
-  margin: 5px 5px 0 0;
-  font-size: 0.85rem;
-  border-radius: 20px;
-  font-weight: 500;
-}
-</style>
+<script src="{{ '/assets/js/filter-projects.js' | relative_url }}"></script>
