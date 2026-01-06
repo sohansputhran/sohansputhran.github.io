@@ -1,0 +1,122 @@
+<!-- ---
+layout: default
+---
+
+<div class="initial-content">
+  <div id="main" role="main">
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+      <header class="page__header">
+        <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+        {% if page.short_description %}
+          <p class="page__lead">{{ page.short_description }}</p>
+        {% endif %}
+      </header>
+
+      <section class="page__content" itemprop="text">
+        {% if page.stack %}
+          <p><strong>Stack:</strong> {{ page.stack | join: " • " }}</p>
+        {% endif %}
+
+        {% if page.tags and page.tags.size > 0 %}
+          <p>
+            {% for t in page.tags %}
+              <span class="tag">{{ t }}</span>
+            {% endfor %}
+          </p>
+        {% endif %}
+
+        <p>
+          {% if page.repo_url %}
+            <a href="{{ page.repo_url }}" target="_blank" rel="noopener">Repo</a>
+          {% endif %}
+          {% if page.demo_url and page.demo_url != "" %}
+            • <a href="{{ page.demo_url }}" target="_blank" rel="noopener">Demo</a>
+          {% endif %}
+        </p>
+      </section>
+    </article>
+  </div>
+</div> -->
+
+---
+layout: default
+---
+
+{% include_cached skip-links.html %}
+{% include_cached masthead.html %}
+
+<div class="initial-content">
+  <div id="main" role="main">
+    {% include_cached sidebar.html %}
+
+    <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+      {% if page.title %}
+        <header>
+          <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+          {% if page.excerpt %}
+            <p class="page__lead">{{ page.excerpt | markdownify | strip_html }}</p>
+          {% endif %}
+        </header>
+      {% endif %}
+
+      <section class="page__content" itemprop="text">
+        {%- assign stack = page.stack | default: empty -%}
+        {%- assign tags = page.tags | default: empty -%}
+
+        {% if stack and stack.size > 0 %}
+          <p><strong>Stack:</strong>
+            {{ stack | join: " • " }}
+          </p>
+        {% endif %}
+
+        <p style="margin-top: 0.75rem;">
+          {% if page.repo %}
+            <a class="btn btn--primary" href="{{ page.repo }}" target="_blank" rel="noopener">Repo</a>
+          {% endif %}
+          {% if page.demo %}
+            <a class="btn btn--info" href="{{ page.demo }}" target="_blank" rel="noopener">Demo</a>
+          {% endif %}
+        </p>
+
+        {% if tags and tags.size > 0 %}
+          <p style="margin-top: 0.75rem;">
+            {% for t in tags %}
+              <span class="page__taxonomy-item" style="margin-right: .35rem;">{{ t }}</span>
+            {% endfor %}
+          </p>
+        {% endif %}
+
+        {% if page.impact and page.impact.size > 0 %}
+          <h2 style="margin-top: 1.25rem;">Impact</h2>
+          <ul>
+            {% for bullet in page.impact limit: 3 %}
+              <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% comment %}
+        Keep the page neat: hide deeper details behind a dropdown.
+        Remove this whole block if you want *zero* details on the page.
+        {% endcomment %}
+        <details style="margin-top: 1rem;">
+          <summary><strong>Details</strong> (problem, role, notes)</summary>
+          <div style="margin-top: .75rem;">
+            {% if page.problem %}
+              <p><strong>Problem:</strong> {{ page.problem }}</p>
+            {% endif %}
+            {% if page.role %}
+              <p><strong>Role:</strong> {{ page.role }}</p>
+            {% endif %}
+            {% if page.content and content != "" %}
+              {{ content }}
+            {% endif %}
+          </div>
+        </details>
+
+      </section>
+    </article>
+  </div>
+</div>
+
+{% include_cached footer.html %}

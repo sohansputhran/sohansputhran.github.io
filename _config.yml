@@ -86,15 +86,16 @@ defaults:
 
   # Project collection items in _projects
   - scope:
-      path: "_projects"
+      path: ""
       type: projects
     values:
-      layout: single
+      layout: project
+      author_profile: true
       classes: wide
-      author_profile: false
-      read_time: false
-      comments: false
+      related: false
       share: false
+      toc: false
+
 
 category_archive:
   type: liquid
