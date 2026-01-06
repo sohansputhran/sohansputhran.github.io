@@ -18,11 +18,9 @@ related: false
     <article class="card project-card" data-tags="{{ p.tags | join: ',' | downcase }}">
       <h3>
         <!-- If you want click to open repo instead of project page, switch the href below -->
-        <a href="{{ p.repo_url }}" target="_blank" rel="noopener">{{ p.title }}</a>
+        <a href="{{ p.repo_url }}">{{ p.title }}</a>
       </h3>
       <p class="muted">{{ p.short_description }}</p>
-
-      <!-- <p class="kv"><strong>Stack:</strong> {{ p.stack | join: " • " }}</p> -->
 
       <div>
         {% for t in p.tags %}
@@ -31,7 +29,6 @@ related: false
       </div>
 
       <p style="margin-top:.5rem;">
-        {% if p.repo_url %}<a href="{{ p.repo_url }}" target="_blank" rel="noopener">Repo</a>{% endif %}
         {% if p.demo_url and p.demo_url != "" %} • <a href="{{ p.demo_url }}" target="_blank" rel="noopener">Demo</a>{% endif %}
       </p>
     </article>
