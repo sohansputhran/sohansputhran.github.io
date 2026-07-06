@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Sohan Sanjeeva Puthran — Data Scientist & AI/ML Engineer. Production ML systems, LLM applications, and scalable data pipelines.">
+<title>Sohan Sanjeeva Puthran · Data Scientist & AI/ML Engineer</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+  :root {
+    --navy-900: #0b1f3a;
+    --navy-800: #12294a;
+    --navy-700: #1a3a63;
+    --accent: #2e6fb7;
+    --accent-light: #eaf1f9;
+    --text: #22303f;
+    --text-muted: #5a6b7d;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fa;
+    --border: #e3e8ee;
+    --shadow-sm: 0 1px 3px rgba(11, 31, 58, 0.08);
+    --shadow-md: 0 6px 20px rgba(11, 31, 58, 0.12);
+    --radius: 10px;
+    --max-w: 1080px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+
+  section { padding: 84px 0; }
+
+  .section-title {
+    font-size: 1.7rem;
+    color: var(--navy-900);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 12px;
+    border-radius: 2px;
+  }
+  .section-sub {
+    color: var(--text-muted);
+    margin-bottom: 44px;
+    max-width: 620px;
+  }
+
+  /* ---------- Navigation ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--navy-900);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 4px; list-style: none; align-items: center; }
+  .nav-links a {
+    display: block;
+    padding: 8px 13px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--navy-900); background: var(--accent-light); }
+  .nav-links a.nav-resume {
+    color: #fff;
+    background: var(--navy-900);
+    margin-left: 8px;
+  }
+  .nav-links a.nav-resume:hover { background: var(--navy-700); color: #fff; }
+
+  .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--navy-900);
+    margin: 5px 0;
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    background: linear-gradient(180deg, var(--navy-900) 0%, var(--navy-800) 100%);
+    color: #fff;
+    padding: 96px 0;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  .hero-kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #9db8d8;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 4.5vw, 2.9rem);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero p.lede {
+    max-width: 600px;
+    font-size: 1.08rem;
+    color: #c9d6e6;
+    margin-bottom: 34px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  }
+  .btn-primary { background: #fff; color: var(--navy-900); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(0,0,0,0.25); }
+  .btn-outline { border: 1px solid rgba(255,255,255,0.45); color: #fff; }
+  .btn-outline:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
+
+  .hero-photo { text-align: center; }
+  .hero-photo img {
+    width: min(260px, 60vw);
+    height: min(260px, 60vw);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid rgba(255,255,255,0.18);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .hero-meta div { min-width: 130px; }
+  .hero-meta strong { display: block; font-size: 1.35rem; }
+  .hero-meta span { font-size: 0.85rem; color: #9db8d8; }
+
+  /* ---------- About ---------- */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .about-grid p { margin-bottom: 18px; }
+  .about-aside {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+  }
+  .about-aside h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .about-aside h3:not(:first-child) { margin-top: 24px; }
+  .about-aside ul { list-style: none; }
+  .about-aside li {
+    font-size: 0.92rem;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .about-aside li:last-child { border-bottom: none; }
+  .about-aside li strong { color: var(--navy-900); display: block; }
+  .about-aside li span { color: var(--text-muted); font-size: 0.85rem; }
+
+  /* ---------- Projects ---------- */
+  #projects { background: var(--bg-alt); }
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 26px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: #c9d8ea;
+  }
+  .card h3 { font-size: 1.15rem; color: var(--navy-900); margin-bottom: 10px; letter-spacing: -0.01em; }
+  .card > p { font-size: 0.95rem; color: var(--text-muted); flex-grow: 1; margin-bottom: 16px; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+  .card-tags span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 3px 10px;
+    border-radius: 99px;
+  }
+  .card-links { border-top: 1px solid var(--border); padding-top: 16px; }
+  .card-links a {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    margin-right: 18px;
+    transition: color 0.2s;
+  }
+  .card-links a:hover { color: var(--navy-900); }
+  .card-links a::after { content: " →"; }
+
+  /* ---------- Skills ---------- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 26px;
+  }
+  .skill-group {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .skill-group:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .skill-group h3 {
+    font-size: 1rem;
+    color: var(--navy-900);
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent-light);
+  }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: 0.82rem;
+    color: var(--navy-700);
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 99px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .chip:hover { background: var(--accent-light); border-color: var(--accent); }
+
+  /* ---------- Certifications ---------- */
+  #certifications { background: var(--bg-alt); }
+  .certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 18px;
+  }
+  .cert {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .cert:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .cert h3 { font-size: 0.98rem; color: var(--navy-900); margin-bottom: 6px; line-height: 1.4; }
+  .cert p { font-size: 0.85rem; color: var(--text-muted); flex-grow: 1; margin-bottom: 10px; }
+  .cert a { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
+  .cert a:hover { color: var(--navy-900); }
+  .cert a::after { content: " ↗"; }
+
+  /* ---------- Contact ---------- */
+  #contact { background: var(--navy-900); color: #fff; text-align: center; }
+  #contact .section-title { color: #fff; }
+  #contact .section-title::after { margin-left: auto; margin-right: auto; }
+  #contact .section-sub { margin-left: auto; margin-right: auto; color: #9db8d8; }
+  .contact-cta { margin-bottom: 48px; }
+  .contact-cta .btn-primary { font-size: 1rem; padding: 14px 34px; }
+  .social-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .social-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #c9d6e6;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .social-row a:hover { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.4); }
+  .social-row svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+
+  /* ---------- Footer ---------- */
+  footer {
+    background: var(--navy-800);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 24px 0;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #8ea6c4;
+  }
+  .footer-inner a { color: #c9d6e6; text-decoration: none; }
+  .footer-inner a:hover { color: #fff; }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+    .hero-photo { order: -1; }
+    .about-grid { grid-template-columns: 1fr; gap: 36px; }
+    section { padding: 60px 0; }
+    .hero { padding: 72px 0; }
+  }
+  @media (max-width: 720px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-md);
+      padding: 8px 16px 16px;
+      display: none;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 14px; }
+    .nav-links a.nav-resume { margin-left: 0; margin-top: 8px; text-align: center; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Sohan<span>.</span>Puthran</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="/assets/resume.pdf" class="nav-resume" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <p class="hero-kicker">Data Scientist · AI/ML Engineer</p>
+          <h1>Turning data into smart, scalable solutions.</h1>
+          <p class="lede">
+            I'm Sohan Sanjeeva Puthran. I build practical ML and data solutions —
+            from experimentation to production deployment — with a focus on LLM
+            applications, MLOps, and measurable business outcomes.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="/assets/resume.pdf" class="btn btn-outline" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="/assets/images/bio-photo.png" alt="Sohan Sanjeeva Puthran" width="260" height="260">
+        </div>
+      </div>
+      <div class="hero-meta">
+        <div><strong>4+</strong><span>Years of experience</span></div>
+        <div><strong>22%</strong><span>Forecast accuracy gains</span></div>
+        <div><strong>10M+</strong><span>Records processed daily</span></div>
+        <div><strong>30%</strong><span>Revenue growth driven</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About</h2>
+      <p class="section-sub reveal">A brief look at what I do and where I've done it.</p>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>
+            I build ML and analytics solutions with a strong emphasis on clean data,
+            measurable evaluation, and production readiness. My recent focus is on LLM
+            applications — retrieval-augmented generation, agentic workflows, and
+            natural-language interfaces built with LangChain, LangGraph, and HuggingFace.
+          </p>
+          <p>
+            At Lundbeck, a global pharmaceutical company, I architected time-series
+            forecasting pipelines that improved accuracy by 22%, led an MLOps rollout on
+            AWS SageMaker that cut model refresh time by 36%, and built data pipelines
+            processing over 10 million records a day. Earlier, at PropTech startup Airriva,
+            my pricing and surge-detection models drove a 30% increase in profits.
+          </p>
+          <p>
+            I enjoy simplifying complex systems — making outputs interpretable, pipelines
+            maintainable, and results useful to both technical and non-technical
+            stakeholders. Beyond work, I've led a 20+ engineer team at Omdena on
+            computer-vision models for rooftop solar detection, and won 1st place in the
+            UN "Unite Ideas" challenge for anti-corruption fraud detection technology.
+          </p>
+        </div>
+        <aside class="about-aside reveal">
+          <h3>Education</h3>
+          <ul>
+            <li>
+              <strong>M.S. Data Science &amp; AI</strong>
+              <span>Campbellsville University, USA · 2024–26</span>
+            </li>
+            <li>
+              <strong>Master of Data Science</strong>
+              <span>Illinois Institute of Technology, USA · 2019–21</span>
+            </li>
+            <li>
+              <strong>B.E. Computer Science</strong>
+              <span>Visvesvaraya Technological University, India · 2013–17</span>
+            </li>
+          </ul>
+          <h3>Highlights</h3>
+          <ul>
+            <li>
+              <strong>1st place, UN "Unite Ideas" challenge</strong>
+              <span>Anti-corruption fraud detection</span>
+            </li>
+            <li>
+              <strong>Lead ML Engineer, Omdena</strong>
+              <span>CV for sustainability, 10+ countries</span>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Projects</h2>
+      <p class="section-sub reveal">Selected work — open source, several with live demos.</p>
+      <div class="projects-grid">
+
+        <article class="card reveal">
+          <h3>AI Trading Copilot</h3>
+          <p>
+            Multi-agent AI trading assistant delivering real-time stock analysis,
+            technical indicators, and conversational financial insights through an
+            interactive Streamlit app.
+          </p>
+          <div class="card-tags">
+            <span>LangChain</span><span>HuggingFace</span><span>GPT-4</span><span>Streamlit</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sohansputhran/ai-trading-copilot" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://ai-trading-copilot.streamlit.app" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>NL2SQL Assistant</h3>
+          <p>
+            Schema-aware natural-language-to-SQL assistant with validation, risk
+            classification, and a RAG-based write mode featuring human-in-the-loop
+            approval and transactional rollback.
+          </p>
+          <div class="card-tags">
+            <span>SQLCoder-7B</span><span>RAG</span><span>LangChain</span><span>Streamlit</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sohansputhran/nl-to-sql-assistant" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://nl-to-sql-assistant.streamlit.app" target="_blank" rel="noopener">Live Demo</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>AI Resume Copilot</h3>
+          <p>
+            AI assistant using open-source LLMs and retrieval-augmented generation to
+            deliver tailored, job-specific resume optimization insights, keyword
+            recommendations, and ATS scoring.
+          </p>
+          <div class="card-tags">
+            <span>LLMs</span><span>RAG</span><span>FAISS</span><span>NLP</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sohansputhran/ai-resume-copilot" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>Quant Trading System</h3>
+          <p>
+            Python-based automated trading platform integrating data extraction,
+            analysis, backtesting, and live execution via broker APIs.
+          </p>
+          <div class="card-tags">
+            <span>Python</span><span>Backtesting</span><span>Broker APIs</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sohansputhran/quant-trading-system" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>Rooftop Solar Detection</h3>
+          <p>
+            Led computer-vision models for rooftop solar panel and obstacle detection
+            with YOLO and Faster R-CNN at Omdena, supporting sustainability initiatives
+            across 10+ countries.
+          </p>
+          <div class="card-tags">
+            <span>Computer Vision</span><span>YOLO</span><span>Faster R-CNN</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sohansputhran" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <h3>Indian Classical Dance Classifier</h3>
+          <p>
+            Deep learning classifier using transfer learning (Inception ResNet) to
+            identify Indian classical dance forms from images.
+          </p>
+          <div class="card-tags">
+            <span>Deep Learning</span><span>Transfer Learning</span><span>Keras</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/sohansputhran/Classifying-Indian-Classical-Dance-Form" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Skills</h2>
+      <p class="section-sub reveal">The tools I reach for, grouped by discipline.</p>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <h3>Programming</h3>
+          <div class="chips">
+            <span class="chip">Python</span>
+            <span class="chip">SQL</span>
+            <span class="chip">R</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">C++</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Machine Learning &amp; AI</h3>
+          <div class="chips">
+            <span class="chip">PyTorch</span>
+            <span class="chip">TensorFlow</span>
+            <span class="chip">Scikit-learn</span>
+            <span class="chip">Computer Vision</span>
+            <span class="chip">NLP</span>
+            <span class="chip">Time-Series</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>LLMs &amp; GenAI</h3>
+          <div class="chips">
+            <span class="chip">LangChain</span>
+            <span class="chip">LangGraph</span>
+            <span class="chip">RAG</span>
+            <span class="chip">HuggingFace</span>
+            <span class="chip">FAISS</span>
+            <span class="chip">CrewAI</span>
+            <span class="chip">AutoGen</span>
+            <span class="chip">Ollama</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Data Engineering</h3>
+          <div class="chips">
+            <span class="chip">PySpark</span>
+            <span class="chip">Airflow</span>
+            <span class="chip">Snowflake</span>
+            <span class="chip">ETL / ELT</span>
+            <span class="chip">Azure Data Factory</span>
+            <span class="chip">Pandas</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="chips">
+            <span class="chip">AWS SageMaker</span>
+            <span class="chip">AWS Lambda</span>
+            <span class="chip">Azure ML</span>
+            <span class="chip">GCP</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">CI/CD</span>
+            <span class="chip">Git</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3>Apps &amp; Visualisation</h3>
+          <div class="chips">
+            <span class="chip">Streamlit</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Flask</span>
+            <span class="chip">Tableau</span>
+            <span class="chip">Power BI</span>
+            <span class="chip">Folium</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-title reveal">Certifications</h2>
+      <p class="section-sub reveal">IBM RAG &amp; Agentic AI professional coursework, plus deep learning specializations.</p>
+      <div class="certs-grid">
+
+        <div class="cert reveal">
+          <h3>Agentic AI with LangChain and LangGraph</h3>
+          <p>IBM · Dec 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/FTDYI24N2AOV" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Build Multimodal Generative AI Applications</h3>
+          <p>IBM · Oct 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/records/N6R5ULFEIGYC" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Advanced RAG with Vector Databases and Retrievers</h3>
+          <p>IBM · Sep 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/MPTMLJ7AMNS6" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Vector Databases for RAG: An Introduction</h3>
+          <p>IBM · Aug 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/CH8D2NHFWTU8" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Build RAG Applications: Get Started</h3>
+          <p>IBM · Jun 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/V5AS3K86XUXG" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Develop Generative AI Applications: Get Started</h3>
+          <p>IBM · Jun 2025</p>
+          <a href="https://www.coursera.org/account/accomplishments/verify/8R53GTJ5VZBI" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Generative Adversarial Networks (GANs) Specialization</h3>
+          <p>Coursera · Nov 2020</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/68YXKNEZZ7EF" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Natural Language Processing Specialization</h3>
+          <p>Coursera · Nov 2020</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/PSEFU4NYD5HB" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>AI for Medicine Specialization</h3>
+          <p>Coursera · Oct 2020</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/DVPNGHLEGX6D" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+        <div class="cert reveal">
+          <h3>Deep Learning Specialization</h3>
+          <p>Coursera · Aug 2020</p>
+          <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/8GLCX5H4CHEB" target="_blank" rel="noopener">Verify</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get in Touch</h2>
+      <p class="section-sub reveal">
+        Open to Data Science &amp; AI roles and collaborations — whether you're a recruiter,
+        a potential collaborator, or just want to chat tech.
+      </p>
+      <div class="contact-cta reveal">
+        <a href="mailto:puthran.sohan@gmail.com" class="btn btn-primary">puthran.sohan@gmail.com</a>
+      </div>
+      <div class="social-row reveal">
+        <a href="https://www.linkedin.com/in/sohansputhran/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.75H5.67v8.59h2.67zM7 8.48a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.86v-4.71c0-2.53-1.35-3.7-3.15-3.7-1.45 0-2.1.8-2.47 1.36V9.75H10.1c.04.75 0 8.59 0 8.59h2.67v-4.8c0-.25.02-.51.1-.7.19-.5.63-1 1.37-1 .96 0 1.35.74 1.35 1.82v4.68h2.75z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/sohansputhran" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.35 1.12 2.92.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.81c0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          GitHub
+        </a>
+        <a href="/assets/resume.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zm-8.5-4.5h2.25a1.75 1.75 0 0 0 0-3.5H8.5v5h1v-1.5zm0-1v-1.5h1.25a.75.75 0 0 1 0 1.5H9.5z"/></svg>
+          Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Sohan Sanjeeva Puthran</span>
+    <span>
+      <a href="https://www.linkedin.com/in/sohansputhran/" target="_blank" rel="noopener">LinkedIn</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/sohansputhran" target="_blank" rel="noopener">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:puthran.sohan@gmail.com">Email</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  var toggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+  toggle.addEventListener("click", function () {
+    var open = navLinks.classList.toggle("open");
+    toggle.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", open);
+  });
+  navLinks.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      navLinks.classList.remove("open");
+      toggle.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Active link highlighting on scroll
+  var sections = document.querySelectorAll("main section[id]");
+  var links = document.querySelectorAll('.nav-links a[href^="#"]');
+  var linkMap = {};
+  links.forEach(function (a) { linkMap[a.getAttribute("href").slice(1)] = a; });
+
+  var sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        links.forEach(function (a) { a.classList.remove("active"); });
+        var link = linkMap[entry.target.id];
+        if (link) link.classList.add("active");
+      }
+    });
+  }, { rootMargin: "-40% 0px -55% 0px" });
+  sections.forEach(function (s) { sectionObserver.observe(s); });
+
+  // Reveal on scroll
+  var revealObserver = new IntersectionObserver(function (entries, obs) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(function (el) { revealObserver.observe(el); });
+})();
+</script>
+
+</body>
+</html>

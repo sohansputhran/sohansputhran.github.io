@@ -1,37 +1,26 @@
-# Sohan Puthran's Data Science Portfolio
+# Sohan Puthran's Portfolio
 
-Welcome to my personal portfolio website, built with Jekyll and powered by GitHub Pages using the [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme.
+Personal portfolio website — a fast, single-page static site served by GitHub Pages.
 
 🚀 **Live Site**: [sohansputhran.github.io](https://sohansputhran.github.io)
 
-## 🔍 About
+## About
 
-I'm a data scientist with over 3 years of experience in building end-to-end AI/ML solutions and data platforms. I specialize in combining machine learning, analytics, and data engineering to solve real-world problems and drive business value.
+I'm a Data Scientist / AI-ML Engineer with 4+ years of experience building end-to-end AI/ML solutions and data platforms. This site showcases my projects, skills, certifications, resume, and contact information.
 
-This website showcases:
-- 📊 Featured projects
-- 🧠 Skills and technologies I work with
-- 📄 Resume
-- 📫 Contact information
+## How it works
 
-## 🛠️ Technologies Used
+- `index.html` — the entire site: HTML, CSS, and JS in one file, no frameworks, no build step
+- `.nojekyll` — tells GitHub Pages to serve files as-is (Jekyll disabled)
+- `assets/resume.pdf` — downloadable resume
+- `assets/images/bio-photo.png` — profile photo
 
-- **Jekyll + GitHub Pages**
-- **Minimal Mistakes theme**
-- Custom **JavaScript** filters for project tagging
-- **Responsive design** using HTML, CSS, and grid layouts
+The legacy Jekyll/Minimal Mistakes files (`_config.yml`, `_pages/`, `_projects/`, etc.) are no longer used by the build.
 
-## 📁 Repo Structure
+## Updating content
 
-- `_projects/`: Markdown files for each project
-- `_pages/`: Custom pages like About, Resume, and Contact
-- `assets/js/filter-projects.js`: Interactive filtering logic for projects
-- `_config.yml`: Site-wide configuration
+Everything lives in `index.html` — edit the relevant section (Projects, Skills, Certifications) directly and push to `main`.
 
-## 📬 Contact
+## Contact
 
-Feel free to reach out via [LinkedIn](https://www.linkedin.com/in/sohanputhran/) or [email me](mailto:sohanputhran@gmail.com) if you're interested in collaborating or recruiting.
-
----
-
-This site is continually updated as I grow, learn, and build new things. ⭐ Star this repo if you like it!
+Reach out via [LinkedIn](https://www.linkedin.com/in/sohansputhran/) or [email](mailto:puthran.sohan@gmail.com).
